@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const embeddings = new GoogleGenerativeAIEmbeddings({
-  model: "gemini-embedding-001", // 768 dimensions
+  model: "gemini-embedding-001", // 3072 dimensions
   apiKey: process.env.GOOGLE_API_KEY
 });
 

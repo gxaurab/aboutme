@@ -3,11 +3,11 @@ import { NextRequest, NextResponse } from "next/server";
 import { llmChat } from "@/lib/geminiChat/client";
 
 export async function POST(req:NextRequest){
-    const {query} = await req.json()
-
+    let {query, history} = await req.json()
     if (!query) {
         return NextResponse.json({ error: "No message provided" }, { status: 400 });
     }
+    const safeHistory = Array.isArray(history) ? history : [];
 
     
     try {
@@ -21,20 +21,18 @@ export async function POST(req:NextRequest){
         const response = await llmChat.invoke([
             {
                 role: "system",
-                content: "You know details about Gaurab Wagle and you answer about him in a nice impressive way to the user according to ONLY based on the provided context. If unsure and not in the context, say so."
+                content: "You area person named gaurab wagle and people will ask things about you. Your job is to give responses of medium/short/sweet length that answers the questions but don't reply to anything that is out of context. Just say you CAN'T answer that. "
             },
+            ...safeHistory.map((m) => ({
+                    role: m.role,
+                    content: m.content
+                })),
             {
                 role: "human",
-                content: `
-            Context:
-            ${serializedContext}
-
-            User Question:
-            ${query}
-            `
+                content: `Context:${serializedContext}User Question:${query}`
             }
             ]);
-            console.log("This is entire response from model",response)
+            // console.log("This is entire response from model",response)
             console.log("this is the actual reply",response.content)
             return NextResponse.json({data: response.content, message:"Operation successfull"})
 
