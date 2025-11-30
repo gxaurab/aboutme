@@ -3,7 +3,7 @@ import Chat from "@/components/chatComponent/chat"
 
 const Likes = () => {
   return (
-    <div className="mt-25">Likes
+    <div className="min-h-screen bg-cyan-950 pt-20">
       <Chat/>
     </div>
   )

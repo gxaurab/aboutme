@@ -29,12 +29,12 @@ const Navbar = () => {
         </Link>
 
         <Link
-          href="/likes"
+          href="/chat"
           className={`hover:text-fuchsia-500 transition-colors duration-300 ${isActive(
-            "/likes"
+            "/chat"
           )}`}
         >
-          Likes
+          Chat
         </Link>
 
         <Link

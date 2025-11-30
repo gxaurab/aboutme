@@ -7,6 +7,7 @@ import SkillDescription from "../components/SkillDescription";
 import TypingText from "../components/TypingText";
 import { useJokes } from "../hooks/useJokes";
 import { FaLinkedin, FaGithub, FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
+import Chat from "@/components/chatComponent/chat";
 
 const Home = () => {
   const { joke, loading, showJoke, handleToggle, ReFetchJoke } = useJokes();
@@ -80,6 +81,7 @@ const Home = () => {
       <div className="text-center">
         <BlogButtonn text="View Blogs" />
       </div>
+      <Chat/>
 
       <SkillDescription />
     </div>

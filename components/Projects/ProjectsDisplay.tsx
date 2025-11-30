@@ -8,10 +8,9 @@ const ProjectsDisplay = () => {
           What kind of projects do I build?
         </h1>
         <p className="text-lg text-gray-300 leading-relaxed">
-          I love building real-world problem-solving projects — the kind that help people, not
-          just showcase technology. I’m driven to create free, open platforms that address issues
-          like environmental change, agriculture, unemployment, illiteracy, poverty, and helping
-          underprivileged children.
+          I love building real problem-solving projects. I’m driven to create free, open platforms that address issues
+          like <i>environmental change, agriculture, unemployment, illiteracy, poverty, and helping
+          underprivileged children.</i> 
         </p>
       </div>
 
@@ -19,7 +18,7 @@ const ProjectsDisplay = () => {
         {projectsList.map((project: projTypes, index: number) => (
           <div
             key={index}
-            className="border border-pink-400/50 rounded-xl p-4 hover:border-pink-400 shadow-[0_0_15px_rgba(255,20,147,0.3)] transition-all"
+            className="border border-pink-400/50 rounded-xl p-4 hover:border-green-400 shadow-[0_0_15px_rgba(255,20,147,0.3)] transition-all"
           >
             <h2 className="text-2xl font-medium text-pink-300 mb-2">{project.title}</h2>
             <p className="text-gray-300 mb-3">{project.description}</p>

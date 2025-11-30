@@ -7,9 +7,9 @@
         --font-bitcount: "Bitcount Prop Single", "sans-serif";
         --font--combo: "Combo", "sans-serif";
     }
-    body{
+    /* body{
         font-family: var(--font--combo);
-    }   
+    }    */
 }
 
 @layer utilities {

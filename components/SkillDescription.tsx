@@ -4,13 +4,13 @@ import { useEffect, useState } from 'react';
 
 const SkillDescription = () => {
   const knows = [
-    'React/NextJs', 'TypeScript', 'Node.js', 'AWS', 'Docker', 'CI/CD',
-    '(Non)/Relational Databases', 'Firebase', 'TailwindCSS',
-    'Python', 'fastAPI', 'TensorFlow', 'YOLO', 'Deep Learning', 'Data Analysis',
+    'React/Next', 'TypeScript', 'Node.js', 'Docker', 'CI/CD',
+    '(Non)/Relational/Vector db', 'Firebase', 'Tailwind',
+    'fastAPI', 'tf', 'Deep Learning', 'Data Analysis',
   ];
 
   const building = [
-    'NLP/LLM', 'pytorch', 'Research Projects', 'DevOps',
+    'NLP', 'pytorch', 'Research Projects', 'DevOps',
   ];
 
   const [knowsHighlight, setKnowsHighlight] = useState(0);
